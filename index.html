@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="alert alert-warning alert-dismissible fade show bg-danger text-white" role="alert" id="error">
+        <!-- alert -->
+        <p id="error-text"></p>
+        <button type="button" class="close text-white" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div id="calculator" class="calculator">
+        <div id="calculator--view--result">
+            <input id="result" disabled placeholder="0" />
+        </div>
+
+        <div id="calculator--digits--container">
+            <button class="calculator--digit color clear" onclick="clearResult();">C</button>
+            <button class="calculator--digit color clear" onclick="deleteDigit();">&#60;</button> <!-- < -->
+
+            <button class="calculator--digit color" onclick="addPercent('%');">%</button>
+            <button class="calculator--digit color" onclick="writeResult('/');">/</button>
+
+            <button class="calculator--digit" onclick="writeResult(7);">7</button>
+            <button class="calculator--digit" onclick="writeResult(8);">8</button>
+            <button class="calculator--digit" onclick="writeResult(9);">9</button>
+            <button class="calculator--digit color" onclick="writeResult('*');">*</button>
+
+            <button class="calculator--digit" onclick="writeResult(6);">6</button>
+            <button class="calculator--digit" onclick="writeResult(5);">5</button>
+            <button class="calculator--digit" onclick="writeResult(4);">4</button>
+            <button class="calculator--digit color" onclick="writeResult('-');">-</button>
+
+            <button class="calculator--digit" onclick="writeResult(1);">1</button>
+            <button class="calculator--digit" onclick="writeResult(2);">2</button>
+            <button class="calculator--digit" onclick="writeResult(3);">3</button>
+            <button class="calculator--digit color" onclick="writeResult('+');">+</button>
+
+            <button class="calculator--digit" onclick="writeResult(0);">0</button>
+            <button class="calculator--digit" onclick="writeResult('.');">.</button>
+            <button class="calculator--digit color equal" onclick="giveResult();">=</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" />
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
